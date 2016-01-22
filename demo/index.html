@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../app-input.html">
+</head>
+
+<body>
+  <div style="width: 256px; border: 1px dotted gray">
+    <app-input value="hello world!" readonly></app-input>
+    <app-input value="click me to edit" type="text"></app-input>
+    <app-input value="91010.56" type="number" format="number"></app-input>
+    <app-input value="0.25" type="number" format="percent"></app-input>
+    <app-input value="2015-12-25" type="date"></app-input>
+  </div>
+  <script>
+    var nlist = document.querySelectorAll('app-input');
+    for (var i = 0; i < nlist.length; ++i) {
+      nlist[i].addEventListener('value-changed', function(event) {
+        console.log("Event('value-changed').detail = " + JSON.stringify(event.detail));
+      });
+    }
+  </script>
+</body>
+</html>
+
