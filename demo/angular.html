@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="ppaComponents">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../app-input.html">
+
+  <script src="../../angular/angular.min.js"></script>
+  <script>angular.module('ppaComponents', []);</script>
+  <script src="../ppaInput.js"></script>
+</head>
+
+<body ng-controller="ppaController">
+  <div style="width: 256px; border: 1px dotted gray">
+    <ppa-input value="hello world!" readonly on-value-change="onValueChange(event)"></ppa-input>
+    <ppa-input value="click me to edit" type="text" on-value-change="onValueChange(event)"></ppa-input>
+    <ppa-input value="91010.56" type="number" on-value-change="onValueChange(event)"></ppa-input>
+    <ppa-input value="2015-12-25" type="date" on-value-change="onValueChange(event)"></ppa-input>
+  </div>
+  <p>{{message}}</p>
+
+  <script>
+    angular.module('ppaComponents')
+      .controller('ppaController', function($scope) {
+        $scope.onValueChange = function(event) {
+          $scope.message = "Event('value-change').detail = " + JSON.stringify(event.detail);
+        }
+      });
+  </script>
+</body>
+</html>
+
