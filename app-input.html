@@ -1,20 +1,29 @@
 <link rel="import" href="../polymer/polymer.html">
 <!--
-A web-component input control that can work in either viewing or editing mode.
+## appInput
 
-Example:
+A web-component input control that can work in either viewing or editing mode prodiving commit/rollback buttons and propert editors.
 
-```html
-<app-input value="1010.56" type="number"></app-input>
+### Usage
+```bash
+  bower install angiolep/app-table --save
 ```
 
-``<app-input>`` starts in viewing mode and it displays its value formatted according the given type (``text`` is the default type). Click the value to switch to editing mode.
+```html
+  <app-input value="1010.56" type="number"></app-input>
+  <app-input value="hello" readonly></app-input>
+```
 
-When in editing mode, ``<app-input>`` displays an editor compatible with the given type (for example a calendar if type is ``date``) and commit/rollback buttons. That allows you to comfortably enter a new value.
 
-As you type a new value which differs from the old one, the commit button gets enabled to let you confirm. Contrarly, the rollback button allows you to restore the old value.
+### Modes
 
-Pressing either commit or rollback switches <app-input> back to viewing mode.
+``<app-input>`` starts in viewing mode and it just displays its value. Click it to switch to editing mode.
+
+When in editing mode, ``<app-input>`` displays an editor compatible with the given type (for example a calendar if type is ``date``) and commit/rollback buttons.
+
+As you type a new value which differs from the old one, the commit button gets enabled to let you confirm the change. Contrarly, the rollback button allows you to restore the old value.
+
+Either commit or rollback switches ``<app-input>`` back to viewing mode.
 
 @demo
 -->

@@ -1,11 +1,11 @@
 {
   "name": "app-input",
   "homepage": "https://github.com/angiolep/app-input",
-  "main": "app-input.html",
+  "main": ["app-input.html", "ppaInput.js"],
   "authors": [
     "Paolo Angioletti <paolo.angioletti@gmail.com>"
   ],
-  "description": "A web-component input control that can work in either viewing or editing mode.",
+  "description": "A web-component input control that can work in either viewing or editing mode prodiving commit/rollback buttons and propert editors.",
   "keywords": [
     "polymer",
     "web-component",
