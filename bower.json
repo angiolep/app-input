@@ -1,0 +1,29 @@
+{
+  "name": "app-input",
+  "homepage": "https://github.com/angiolep/app-input",
+  "main": ["app-input.html", "ppaInput.js"],
+  "authors": [
+    "Paolo Angioletti <paolo.angioletti@gmail.com>"
+  ],
+  "description": "A web-component input control that can work in either viewing or editing mode prodiving commit/rollback buttons and propert editors.",
+  "keywords": [
+    "polymer",
+    "web-component",
+    "web-components"
+  ],
+  "license": "http://unlicense.org",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "demo"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.3"
+  },
+  "devDependencies": {
+    "web-component-tester": "~4.1.0",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.1.4",
+    "angular": "^1.5.0"
+  }
+}
