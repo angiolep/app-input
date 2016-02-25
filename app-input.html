@@ -115,8 +115,6 @@ Either commit or rollback switches ``<app-input>`` back to viewing mode.
     },
 
     attached: function() {
-      // TODO publish 46 for <app-table> to use
-      this.$.inputText.style.width = String(this.offsetWidth - 46) + 'px';
       if (!this.readonly) {
         var that = this;
 
